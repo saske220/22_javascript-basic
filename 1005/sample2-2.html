@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample2-2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>HTMLのタイトルを取得</h1>
     <p>
-        <script>
+      <script>
+        document.write(document.title);
 
-            document.write(document.title);
+        // コンソールで表示
 
-            // コンソールで表示
+        console.log(document.title);
 
-            console.log(document.title);
+        console.log(document.charset);
 
-            console.log(document.charset);
+        console.dir(document);
 
-            console.dir(document);
-
-            // エスケープ
-            console.log("\"エスケープシーケンス\"")
-        </script>
+        // エスケープ
+        console.log('"エスケープシーケンス"');
+      </script>
     </p>
     <script src="./script.js"></script>
-
-</body>
-
+  </body>
 </html>
