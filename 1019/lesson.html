@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson.html</title>
+  </head>
+  <body>
+    <dl class="recipe">
+      <dt>カップヌードルの作り方</dt>
+      <dd>フタを途中まで開ける</dd>
+      <dd>お湯を線まで入れてフタをする</dd>
+    </dl>
+
+    <script>
+      const element = document.querySelector("dl");
+      console.log(element);
+
+      const element2 = document.querySelector(".recipe");
+      console.log(element2);
+
+      const ddlast = document.createElement("dd");
+      console.dir(ddlast);
+      ddlast.textContent = "3分待ってできあがり";
+      console.dir(ddlast);
+
+      element.appendChild(ddlast);
+
+      //宣言 代入
+      const animals = ["dog", "cat", "bird"];
+      //確認
+      console.log(animals);
+      //長さ
+      console.log(animals.length);
+      //cat
+
+      console.log(animals(1));
+
+      for (let i = 0; i < 9; i++) {
+        //テンプレートリテラル
+        console.log(`7 × ${i + 1} = ${7 * (i + 1)}`);
+      }
+
+      const name_list = ["松田", "田中", "中山", "山本", "本田", "スペディ"];
+      console.log(name_list);
+
+      //山本がほしい
+
+      console.log(name_list[3]);
+
+      for (let i = 0; i < name_list.length; i++) {
+        console.log(name_list[i]);
+      }
+    </script>
+  </body>
+</html>

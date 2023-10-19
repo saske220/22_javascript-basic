@@ -34,6 +34,14 @@
       console.dir(lilast); //dirに変更、オブジェクトの中がみれる
       lilast.textContent = "メロン";
       console.dir(lilast);
+
+      //リストの最後に追加する ↑<li>メロン</li>を変数element内の<ul></ul>に追加する
+      element.appendChild(lilast);
+
+      //いちごを追加したい
+      const lilast2 = document.createElement("li");
+      lilast2.textContent = "いちご";
+      element.appendChild(lilast2);
     </script>
   </body>
 </html>
