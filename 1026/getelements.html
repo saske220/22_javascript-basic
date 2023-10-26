@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>volleyball</title>
+  </head>
+  <body>
+    <h1>バレーボール パリ五輪出場権獲得国</h1>
+    <ul id="toparis" class="mens">
+      <li class="pool_a">ドイツ</li>
+      <li class="pool_a">ブラジル</li>
+      <li class="pool_b">アメリカ</li>
+      <li class="pool_b">日本</li>
+      <li class="pool_c">ポーランド</li>
+      <li class="pool_c">カナダ</li>
+    </ul>
+
+    <ul class="imo">
+      <li>ベニアズマ</li>
+      <li>安納いも</li>
+    </ul>
+
+    <script>
+      //さつまいも
+      //要素の追加をしたい
+
+      //挿入したい要素の（親）
+      const sweetpotatos = document.querySelector(".imo");
+
+      //複数入れたい場合は、for文でループするか、テンプレートリテラルを使う。
+      sweetpotatos.innerHTML += `<li>べにはるか</li>
+<li>シルクスイート</li>
+<li>なると金時<span>（高系14号）</span></li>`;
+    </script>
+
+    <script>
+      //バレーボール
+      const nations_list = document.querySelectorAll("ul li");
+      for (let i = 0; i < nations_list.length; i++) {
+        console.log(nations_list[i]);
+      }
+
+      const id_element = document.getElementById("toparis");
+      console.dir(id_element.children[3]);
+
+      const tag_element = document.getElementsByTagName("li");
+      console.log(id_element);
+      for (let i = 0; i < tag_element.length; i++) {
+        console.log(tag_element[i]);
+      }
+
+      const class_element = document.getElementsByClassName("pool_a");
+      console.log(class_element);
+      for (let i = 0; i < class_element.length; i++) {
+        console.log(class_element);
+      }
+    </script>
+  </body>
+</html>

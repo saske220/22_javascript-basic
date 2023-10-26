@@ -1,0 +1,25 @@
+body{
+  background-color:#fff;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+h1 {
+  width: 100%;
+}
+h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.card1,
+.card2 {
+  width: 33%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #9d9d9d;
+}
+img {
+  width: 100%;
+}
