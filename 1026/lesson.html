@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>練習</title>
+  </head>
+  <body>
+    <style>
+      body {
+        height: 2000px;
+      }
+
+      .text {
+        color: red;
+      }
+
+      .blue {
+        color: blue;
+      }
+    </style>
+
+    <p class="text blue"><span>色の名前</span>色です。</p>
+
+    <button class="red">赤色</button>
+    <button class="blue">青色</button>
+    <button class="yellow">黄色</button>
+    <button class="fontsize">大きさ</button>
+
+    <script>
+      //Javascriptの中に必要な要素全部取得
+      //文字の色を変えてみましょう
+      //ボタンを取得する
+      redBtn = document.querySelector(".red");
+
+      //文字を取得する
+      const text = document.querySelector(".text");
+      const textSpan = document.querySelector(".text span");
+
+      //ボタンにClickイベントを設定する
+      redBtn.addEventListener("click", function () {
+        console.dir("赤クリック");
+        text.style.color = "#ff0000";
+        textSpan.innerText = "赤";
+      });
+
+      //青色
+      blueBtn = document.querySelector(".blue");
+
+      blueBtn.addEventListener("click", function () {
+        console.dir("青色クリック");
+        text.style.color = "#0000ff";
+        textSpan.innerText = "青";
+      });
+
+      //黄色
+
+      yellowBtn = document.querySelector(".yellow");
+
+      yellowBtn.addEventListener("click", function () {
+        console.dir("黄色クリック");
+        text.style.color = "yellow";
+        textSpan.innerText = "黄色";
+      });
+
+      fontsizeBtn = document.querySelector(".fontsize");
+
+      fontsizeBtn.addEventListener("click", function () {
+        console.dir("大きさ");
+        fs.style.fontSize = "20px";
+      });
+    </script>
+
+    <script>
+      //スクロールされるたびにconsoleにスクロールされましたと表示されるプログラムを書いてください
+
+      //windowの仕事です。
+
+      window.addEventListener("scroll", function () {
+        //ここに処理を書きます。
+        console.log("スクロールされました。");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>イベント</title>
+  </head>
+  <body>
+    <button id="btn">ハンドラを起動</button>
+    <button id="nonFunc">関数をつかわない</button>
+
+    <script>
+      const btn = document.querySelector("#btn");
+      console.log(btn);
+
+      //関数を定義
+
+      function showMessage() {
+        alert("イベントが発生しました");
+      }
+
+      //イベント登録
+
+      //何に何をしたら、どうなる。
+
+      //「ボタン」に「クリック」をしたら「アラート」が出る
+
+      btn.addEventListener("click", showMessage);
+      //加えるイベント + リスト
+
+      //関数を使わない
+
+      const nonFuncBtn = document.querySelector("#nonFunc");
+      nonFuncBtn.addEventListener("click", function () {
+        alert("関数を使わないボタンをクリック");
+      });
+
+      //例）「ブラウザで発生する主なイベント」から"resize"（サイズが変更する）タイミングで console に文字が発生するようにします。
+      //resizeは、DOM内にはありませんのでwindowで取得します。
+      window.addEventListener("resize", function () {
+        //ここに処理を書きます。
+        console.log("サイズが変わりました。");
+      });
+    </script>
+  </body>
+</html>
