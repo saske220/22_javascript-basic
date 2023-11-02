@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カウンター</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      //書いていきます。
+      //カウンタ-let counter = 0 を使ってブラウザ内(body)をクリックしたら、consoleに数字が１ずつ加わった数を表示させていましょう。
+
+      const body_element = document.querySelector("body");
+      console.log(body_element);
+      let counter = -1;
+
+      //クリックイベント
+
+      const color_array = ["pink", "blue", "orange", "green", "tomato"];
+
+      body_element.addEventListener("click", function () {
+        counter++;
+        console.log(color_array);
+        body_element.style.backgroundColor = color_array[counter];
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+/* body {
+  transition: opacity 1s ease-in .8s;
+  opacity: 0;
+  visibility: visible;
+}
+
+.view {
+  opacity: 100;
+  visibility: inherit;
+} */

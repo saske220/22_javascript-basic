@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>富士山写真</title>
+  </head>
+
+  <body>
+    <div class="photo">
+      <img src="images/mt-fuji001.jpg" id="mt-fuji" class="hide" />
+    </div>
+    <div class="buttons">
+      <button type="button" class="image-fuji">富士山１</button>
+      <button type="button" class="image-fuji">富士山2</button>
+      <button type="button" class="image-fuji">富士山3</button>
+    </div>
+    <script>
+      //画像ファイル名は、配列から取得します。
+      const fujiImg_list = [
+        "mt-fuji001.jpg",
+        "mt-fuji002.jpg",
+        "mt-fuji003.jpg",
+      ];
+
+      // 画像のタグ<img>要素を変数に取得
+
+      const mtfujiimg = document.querySelector("#mt-fuji");
+
+      //富士山のボタン全てを querySelectorAll で変数に取得
+      const mtFujisBtn = document.querySelectorAll(".image-fuji ");
+      console.log(mtFujisBtn[0]);
+
+      //表示
+
+      mtFujisBtn[0].addEventListener("click", function () {
+        mtfujiimg.setAttribute("src", "images/mt-fuji001.jpg");
+      });
+
+      mtFujisBtn[1].addEventListener("click", function () {
+        mtfujiimg.setAttribute("src", "images/mt-fuji002.jpg");
+      });
+
+      mtFujisBtn[2].addEventListener("click", function () {
+        mtfujiimg.setAttribute("src", "images/mt-fuji003.jpg");
+      });
+    </script>
+  </body>
+</html>

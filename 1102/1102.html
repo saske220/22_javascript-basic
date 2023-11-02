@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>属性の操作</title>
+
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>タイトル</h1>
+
+    <script>
+      //全部JavaScript内に持ってくる
+      const h1_element = document.querySelector("h1");
+
+      //確認重要
+      console.log(h1_element);
+
+      //hasAttribute
+
+      const has_result = h1_element.hasAttribute("class");
+      console.log(has_result);
+
+      //getAttribute
+
+      const get_result = h1_element.getAttribute("class");
+      console.log(get_result);
+
+      //className classの値を上書きできる
+      h1_element.className = "sitename";
+
+      //classlist.addを加えたいとき
+      h1_element.classList.add("w-full");
+
+      //classlist.remove("class");//クラスの削除をします
+      h1_element.classList.remove("sidename");
+
+      //classlist.taggle("class");//クラスが存在する場合は削除します、なければ通知します
+
+      const body_element = document.body;
+      body_element.addEventListener("click", function () {
+        body_element.classList.toggle("red");
+      });
+      //classlist.contains("class");//クラスをの有無をチェックし,true/falseを返します
+
+      const contains_result = h1_element.classList.contains("sitename");
+      console.log(contains_result); //上で削除しているのでfalse
+    </script>
+  </body>
+</html>
