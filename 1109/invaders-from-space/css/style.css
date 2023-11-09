@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  column-gap: 2%;
+  padding: 1em;
+  position: relative;
+  height: 200px;
+  margin: 100px auto 0;
+}
+
+.enemy,
+.satan {
+  width: 18%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  transition: all 1s ease-in;　/*CSSアニメーション*/
+  position: absolute;
+  bottom: 0;
+  transform: rotateX(0deg);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+button {
+  width: 18%;
+  padding: 10px 0;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding-top: 5em;
+}
+
+.hide {
+  position: absolute;
+  transform: rotateX(1800deg);
+  bottom: 999px;
+}

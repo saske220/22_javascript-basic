@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>if文による条件分岐</h1>
+    <script>
+      /* ※ブロックコメント
+  条件分岐のサンプル(1)
+  if文による条件分岐*/
+      const num = 10;
+      //条件分岐 ※行コメント
+      if (num >= 100) {
+        document.body.insertAdjacentHTML("beforeEnd", "<p>numは100以上</p>");
+      } else if (num === 0) {
+        document.body.insertAdjacentHTML("beforeEnd", "<p>numは0</p>");
+      } else {
+        document.body.insertAdjacentHTML("beforeEnd", "<p>numは100未満</p>");
+      }
+      console.log(num >= 100);
+      console.log(1 == 1); //true
+      console.log(1 === 1); //true
+
+      console.log(1 == "1"); //true
+      console.log(1 === "1"); //falseなぜ？　文字列型がないと数値型が違うので、===のときはfalse
+    </script>
+  </body>
+</html>

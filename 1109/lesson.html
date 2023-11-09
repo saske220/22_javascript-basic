@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSアニメーション</title>
+    <style>
+      p {
+        margin-left: 0;
+        opacity: 1;
+        /*① ここにアニメーションの設定*/
+        transition: all 1s ease-in 1s;
+
+        /*神になる。ある要素に能力を与える*/
+      }
+      .slide {
+        /*② ここにデフォルトとの差*/
+        margin-left: 1000%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>フェードアウトしながら、横にスライドする①</p>
+    <p>フェードアウトしながら、横にスライドする②</p>
+    <p>フェードアウトしながら、横にスライドする③</p>
+    <p>フェードアウトしながら、横にスライドする④</p>
+
+    <script>
+      //ここに記述していきます。
+      const text = document.querySelectorAll("p");
+      console.log(text);
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].addEventListener("click", function () {
+          this.classList.add("slide");
+        });
+      }
+    </script>
+  </body>
+</html>

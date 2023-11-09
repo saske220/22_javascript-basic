@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>乱数を使った条件分岐</title>
+  </head>
+  <body>
+    <script>
+      const num = Math.round(Math.random() * 100);
+      console.log("現在の値：" + num);
+      const rem = num % 2;
+
+      //偶数を表示するif文を書いてください。
+      if (rem === 0) {
+        console.log(num + "は偶数です");
+      } else {
+        console.log(num + "は奇数です");
+      }
+    </script>
+  </body>
+</html>

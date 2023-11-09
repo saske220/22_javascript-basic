@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>宇宙からの侵略者</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>宇宙からの侵略者</h1>
+      <p>
+        ダダダッ！敵があらわれた！<br />
+        クリックして敵を消せ！
+      </p>
+    </header>
+    <main>
+      <section>
+        <div class="enemy">
+          <img src="images/enemy001.png" alt="チョコソフトの妖精" />
+        </div>
+        <div class="enemy">
+          <img src="images/enemy002.png" alt="Tさん 魔人態" />
+        </div>
+        <div class="enemy">
+          <img
+            src="images/enemy003.png"
+            alt="謎の美女を率いられて故郷の村を焼きにきた謎の集団"
+          />
+        </div>
+        <div class="enemy">
+          <img
+            src="images/enemy004.png"
+            alt="謎の集団を率いて故郷の村を焼きにきた謎の美女"
+          />
+        </div>
+        <div class="satan">
+          <img src="images/enemy005.png" alt="ロクテンマオウ" />
+        </div>
+      </section>
+      <div class="buttons">
+        <button class="enemyBtn">チョコソフトの妖精</button>
+        <button class="enemyBtn">Tさん 魔人熊</button>
+        <button class="enemyBtn">謎の軍団</button>
+        <button class="enemyBtn">謎の美女</button>
+        <button class="satansBtn">ロクテンマオウ</button>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <small
+          >イラスト：マゼラン（<a href="https://twitter.com/MazeranPickman"
+            >マゼラン</a
+          >）
+        </small>
+      </p>
+    </footer>
+    <script>
+      // こちらに記述していきます。
+
+      /*画像取得*/
+
+      const satan = document.querySelector(".satan img");
+      console.log(satan);
+
+      /*ボタン*/
+      const satansBtn = document.querySelector(".satansBtn");
+      console.log(satansBtn);
+
+      /*イベント*/
+      satansBtn.addEventListener("click", function () {
+        satan.classList.toggle("hide");
+      });
+
+      /*画像取得*/
+      const enemyImg = document.querySelectorAll(".enemy img");
+      console.log(enemyImg);
+
+      /*ボタン取*/
+      const attackBtn = document.querySelectorAll(".enemyBtn");
+      console.log(attackBtn);
+
+      /*イベント*/
+      for (let i = 0; i < attackBtn.length; i++) {
+        attackBtn[i].addEventListener("click", function () {
+          enemyImg[i].classList.toggle("hide");
+        });
+      }
+    </script>
+  </body>
+</html>

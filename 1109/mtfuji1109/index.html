@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>富士山写真</title>
+  </head>
+
+  <body>
+    <div class="photo">
+      <img src="images/mt-fuji001.jpg" id="mt-fuji" class="hide" />
+    </div>
+    <div class="buttons">
+      <button type="button" class="image-fuji">富士山１</button>
+      <button type="button" class="image-fuji">富士山2</button>
+      <button type="button" class="image-fuji">富士山3</button>
+      <button type="button" class="pre">前</button>
+      <button type="button" class="next">次</button>
+    </div>
+    <script>
+      //ふわっと表示させる
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.className = "view";
+      });
+      //画像ファイル名は、配列から取得します。
+      const fujiImg_list = [
+        "mt-fuji001.jpg",
+        "mt-fuji002.jpg",
+        "mt-fuji003.jpg"
+      ];
+
+      //ここに処理を書きます。
+      const imageArea = document.querySelector("#mt-fuji");
+      const btns = document.querySelectorAll(".image-fuji");
+      const preBtn = document.querySelector(".pre");
+      const nextBtn = document.querySelector(".next");
+      let count = 0;
+
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          imageArea.setAttribute("src", `images/${fujiImg_list[i]}`);
+          count = i;
+        });
+      }
+
+      //次の画像を表示
+      nextBtn.addEventListener("click", function () {
+        count++;
+        imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+      });
+
+      //前の画像を表示
+      preBtn.addEventListener("click", function () {
+        count--;
+        imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+      });
+    </script>
+  </body>
+</html>
