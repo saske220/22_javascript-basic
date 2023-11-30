@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-querySelectorとquerySelectorAll</title>
+  </head>
+  <body>
+    <h1>朝マック</h1>
+    <ul class="morningmac">
+      <li class="muffin">ソーセージマフィン</li>
+      <li class="muffin">エッグマックマフィン</li>
+      <li class="muffin">ソーセージエッグマフィン</li>
+      <li class="muffin">チキンクリスプマフィン</li>
+      <li class="hotcake">ホットケーキ</li>
+      <li class="griddle">マックグリドルソーセージ</li>
+      <li class="griddle">マックグリドルソーセージエッグ</li>
+      <li class="griddle">マックグリドルベーコンエッグ</li>
+      <li>ベーコンエッグマックサンド</li>
+      <li>フィレオフィッシュ</li>
+    </ul>
+    <script>
+      // 例
+      // ソーセージマフィンをquerySelectorで取得しコンソールで表示
+      const sausage = document.querySelector("li");
+      console.log(sausage.textContent);
+
+      //ホットケーキをquerySelectorで取得しコンソールで表示
+
+      const hotcake = document.querySelector(".hotcake");
+      console.log(hotcake);
+
+      //マックグリドルソーセージをquerySelectorで取得しコンソールで表示
+
+      const soseji = document.querySelector(".griddle");
+      console.log(soseji);
+
+      //ソーセージエッグマフィンをquerySelectorAll("li")で取得し、コンソールで表示
+
+      const egg = document.querySelectorAll("li");
+      console.log(egg);
+
+      //class="griddle"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+
+      const gri = document.querySelectorAll(".griddle");
+      for (let i = 0; i < gri.length; i++) {
+        console.log(gri[i]);
+      }
+    </script>
+  </body>
+</html>

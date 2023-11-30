@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル1-HTMLの取得と連結</title>
+  </head>
+  <body>
+    <h1>坂道グループ</h1>
+    <ul>
+      <li class="nogizaka">乃木坂</li>
+      <li class="hinatazaka">日向坂</li>
+      <li class="sakurazaka">櫻坂</li>
+      <li class="sample">欅坂</li>
+    </ul>
+
+    <script>
+      const num1 = 32;
+      const num2 = 14;
+
+      //例:htmlから要素を取得し、num1とnum2を足してアイドルグループ名をコンソールに表示させる。
+      const keyaki = document.querySelector(".sample").textContent;
+      //抜き出したテキストと株式会社を組み合わせてコンソールに表示
+      console.log(keyaki + (num1 + num2));
+
+      //上記htmlから坂道を取得し、num1とnum2を足してアイドルグループ名をコンソールに表示させる。
+      // 乃木坂46
+
+      // 日向坂46
+
+      // 櫻坂46
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-querySelectorとquerySelectorAll</title>
+  </head>
+  <body>
+    <h1>すき家の牛丼</h1>
+    <ul class="gyudons">
+      <li class="negi">ねぎキムチ牛丼</li>
+      <li class="negi">おんたまねぎキムチ牛丼</li>
+      <li class="negi">マヨねぎキムチ牛丼</li>
+      <li class="base">牛丼</li>
+      <li>とろ〜り3種のチーズ牛丼</li>
+      <li class="negi">ねぎ玉牛丼</li>
+      <li>おろしポン酢牛丼</li>
+      <li>高菜明太マヨ牛丼</li>
+      <li>わさび山かけ牛丼</li>
+      <li>かつぶしオクラ牛丼</li>
+    </ul>
+    <script>
+      // 例
+      // ねぎキムチ牛丼をquerySelectorで取得しコンソールで表示
+      const negiKimchi = document.querySelector("li");
+      console.log(negiKimchi.textContent);
+
+      //牛丼をquerySelectorで取得しコンソールで表示
+
+      const gyudon = document.querySelector(".base");
+      console.log(gyudon);
+
+      //おんたまねぎキムチ牛丼をquerySelectorで取得しコンソールで表示※nth-childを使う。
+
+      const ontama = document.querySelector(".negi:nth-child(2)");
+      console.log(ontama);
+
+      //高菜明太マヨ牛丼をquerySelectorAll("li")で取得し、コンソールで表示
+
+      const mayo = document.querySelectorAll("li");
+      console.log(mayo);
+
+      //class="negi"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+
+      const negi = document.querySelectorAll(".negi");
+      for (let i = 0; i < negi.length; i++) {
+        console.log(negi[i]);
+      }
+    </script>
+  </body>
+</html>

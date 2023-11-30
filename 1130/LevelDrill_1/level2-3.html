@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-変数の値をhtmlに追加</title>
+  </head>
+  <body>
+    <h1>2022 サッカーワールドカップ</h1>
+    <p>
+      <span class="nation"></span
+      >は初戦ではドイツと対戦。前半は防戦一方の展開となり、33分には先制を許した。<br />
+      だが苦しい中でも前半を1失点で我慢すると、日本は後半に勝負をかけた。<br />
+      三笘薫、堂安律、浅野拓磨、南野拓実と攻撃的なカードを切ると、この交代が実った。<br />
+      75分に堂安が同点ゴールを奪うと、83分には浅野が逆転弾。見事初戦でドイツを<span
+        class="japanscore"
+        style="color: red"
+        >日本の点数</span
+      >対<span class="germanyscore" style="color: red">ドイツの点数</span
+      >で撃破し、大番狂わせを起こしてみせた
+    </p>
+    <script>
+      //下記の変数を使って、上記の文章を完成させてください。
+      //例
+      const nation = "日本代表";
+      const nationName = document.querySelector(".nation");
+      nationName.textContent = nation;
+
+      //日本の点数
+      const japan = 2;
+      const japanName = document.querySelector(".japanscore");
+      japanName.textContent = japan;
+
+      //ドイツの点数
+      const germany = 1;
+      const germanyName = document.querySelector(".germanyscore");
+      germanyName.textContent = germany;
+    </script>
+  </body>
+</html>

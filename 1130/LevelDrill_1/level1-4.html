@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル1-HTMLの取得と連結</title>
+  </head>
+  <body>
+    <h1>東海地区の上場企業（プライム）</h1>
+    <ul>
+      <li class="toyota">トヨタ自動車</li>
+      <li class="kakiyasu">柿安本店</li>
+      <li class="kagome">カゴメ</li>
+      <li class="moriseiki">DMG森精機</li>
+      <li class="yamaha">メニコン</li>
+      <li class="sample">NTTドコモ</li>
+    </ul>
+
+    <script>
+      const corporation = "株式会社";
+
+      //例:htmlから要素を取得し、テキストも取得し変数に代入する。
+      const docomoText = document.querySelector(".sample").textContent;
+      //抜き出したテキストと株式会社を組み合わせてコンソールに表示
+      console.log(corporation + docomoText);
+
+      //上記htmlから会社名を取得し変数に代入し、前株もしくは後株でコンソールに表示させてください。
+      // トヨタ自動車株式会社
+
+      // 株式会社柿安本店
+
+      // カゴメ株式会社
+
+      // DMG森精機株式会社
+
+      // 株式会社メニコン
+    </script>
+  </body>
+</html>

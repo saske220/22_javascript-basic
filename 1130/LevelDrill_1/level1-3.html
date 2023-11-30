@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル1-HTMLの取得と連結</title>
+  </head>
+  <body>
+    <h1>ラーメンの種類</h1>
+    <ul>
+      <li class="shoyu">醤油</li>
+      <li class="miso">味噌</li>
+      <li class="sio">塩</li>
+      <li class="tonkotsu">とんこつ</li>
+      <li class="tori">鶏白湯</li>
+      <li class="sample">ベビスター</li>
+    </ul>
+
+    <script>
+      const ramen = "ラーメン";
+
+      //例:htmlから要素を取得し、変数に代入する。
+      const babystar = document.querySelector(".sample");
+      //要素なので、中からテキストを抜き出し、変数に代入する。
+      const babystarText = babystar.textContent;
+      //抜き出したテキストとラーメンを結合し、コンソールに表示する。
+      console.log(babystarText + ramen);
+
+      //上記htmlから各単語を取得し変数に代入し、5種類のラーメンをコンソールに表示させてください。
+      // 醤油らーめん
+
+      // 味噌ラーメン
+
+      // 塩ラーメン
+
+      // とんこつラーメン
+
+      // 鶏白湯ラーメン
+    </script>
+  </body>
+</html>
