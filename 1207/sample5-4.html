@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>変数のスコープ</h1>
+    <script>
+      // グローバル変数の初期化※再代入可能にするためletを使う。
+      let global = "グローバル変数";
+
+      //関数funcの定義
+      const func = function () {
+        //ローカル変数の初期化
+        let local = "ローカル変数";
+        //グローバル変数の表示
+        console.log(global);
+        //ローカル変数の表示
+        console.log(local);
+        global = "グローバル変数を再代入";
+
+        var global = "グローバル変数を再定義";
+        console.log(global);
+      };
+
+      if (global) {
+        var local2 = "varは関数スコープ";
+        let local3 = "letはブロックスコープ";
+      }
+
+      //関数funcの呼び出し
+      func();
+      //グローバルはvar global = "グローバル変数を再定義";で再定義されているので、undefinedになる。
+
+      //グローバル変数の表示
+      console.log(global);
+      //ローカル変数の表示は、関数funcの中で定義されているので、呼び出せない。
+      //console.log(local);
+      //varは関数スコープなので、if文の外で呼び出せる。
+      console.log(local2);
+      //letはブロックスコープなので、if文の外で呼び出せない。
+      console.log(local3);
+    </script>
+  </body>
+</html>

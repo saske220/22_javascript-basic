@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -22,6 +22,21 @@
       const nino = "二宮和也";
       const ono = "大野智";
       const sakurai = "櫻井翔";
+
+      // const liElm1 = document.createElement("li");
+      // liElm1.textContent = aiba;
+      // sailorSensi.appendChild(liElm1);
+
+      //-------------AI-使用-----------解読済み-----//
+
+      const arashiMembers = [aiba, matsujun, nino, ono, sakurai];
+
+      const arashiList = document.querySelector(".arashi");
+      arashiMembers.forEach((member) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = member;
+        arashiList.appendChild(listItem);
+      });
     </script>
   </body>
 </html>

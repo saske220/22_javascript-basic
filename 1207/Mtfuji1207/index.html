@@ -45,44 +45,64 @@
         });
       }
 
-      //次の画像を表示
-      // nextBtn.addEventListener("click", function () {
-      //   count++;
-      //   imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
-      // });
-
-      nextBtn.addEventListener("click", function () {
+      //関数式
+      const nextStep = function () {
         if (count === 2) {
           count = 0;
-          //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
           //0だから最初の画像に戻る
         } else {
-          count++; //インクリメントは、＋１
-          //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+          count++; //インクリメント
+          //２分以外はそのまま次の画像へ
         }
-
-        //ifの中の同じ文を一つにまとめることができる
         imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
         console.log(count);
+      };
+
+      //次の画像を表示
+
+      nextBtn.addEventListener("click", function () {
+        // if (count === 2) {
+        //   count = 0;
+        //   //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        //   //0だから最初の画像に戻る
+        // } else {
+        //   count++; //インクリメントは、＋１
+        //   //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        // }
+
+        // //ifの中の同じ文を一つにまとめることができる
+        // imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        // console.log(count);
+
+        nextStep();
       });
 
-      //前の画像を表示
-      // preBtn.addEventListener("click", function () {
-      //   count--;
-      //   imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
-      // });
-
-      preBtn.addEventListener("click", function () {
+      const backStep = function () {
         if (count === 0) {
           count = 2;
-          //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+          //0だから最初の画像に戻る
         } else {
-          count--; //デクリメントは、ー１
-          //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+          count--; //インクリメント
+          //２分以外はそのまま次の画像へ
         }
-
         imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
         console.log(count);
+      };
+
+      //前の画像を表示
+
+      preBtn.addEventListener("click", function () {
+        // if (count === 0) {
+        //   count = 2;
+        //   //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        // } else {
+        //   count--; //デクリメントは、ー１
+        //   //imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        // }
+
+        // imageArea.setAttribute("src", "images/" + fujiImg_list[count]);
+        // console.log(count);
+        backStep();
       });
     </script>
   </body>

@@ -12,103 +12,143 @@
       <li>猫</li>
     </ul>
     <p class="result"></p>
+
+    <button class="lesserafim">ルセラフィムメンバー</button>
+    <button class="onepiece">ワンピースメンバー</button>
     <div class="fnArea"></div>
   </body>
 
   <script>
-    const dog = document.querySelector("li:nth-child(1)");
-    console.log(dog);
+        const dog = document.querySelector("li:nth-child(1)");
+        console.log(dog);
 
-    const cat = document.querySelector("li:nth-child(2)");
-    console.log(cat);
+        const cat = document.querySelector("li:nth-child(2)");
+        console.log(cat);
 
-    const resultArea = document.querySelector(".result");
-    console.log(resultArea);
+        const resultArea = document.querySelector(".result");
+        console.log(resultArea);
 
-    //関数式
-    console.log("あなたは");
-    const animalCheck = function (animal) {
-      resultArea.textContent = "あなたは" + animal + "派です";
-    };
+        //関数式
+        console.log("あなたは");
+        const animalCheck = function (animal) {
+          resultArea.textContent = "あなたは" + animal + "派です";
+        };
 
-    dog.addEventListener("click", function () {
-      console.dir(this);
-      animalCheck(this.textContent);
-    });
+        dog.addEventListener("click", function () {
+          console.dir(this);
+          animalCheck(this.textContent);
+        });
 
-    cat.addEventListener("click", function () {
-      console.dir(this);
-      animalCheck(this.textContent);
-    });
+        cat.addEventListener("click", function () {
+          console.dir(this);
+          animalCheck(this.textContent);
+        });
 
-    //----------------------------------------------------
+        //----------------------------------------------------
 
-    //関数の定義
-    const yoshinoya = function (gyu1, gyu2, gyu3, gyu4) {
-      console.log(gyu1 + "の" + gyu2 + "、" + gyu3 + "で" + gyu4);
-    };
+        //関数の定義
+        const yoshinoya = function (gyu1, gyu2, gyu3, gyu4) {
+          console.log(gyu1 + "の" + gyu2 + "、" + gyu3 + "で" + gyu4);
+        };
 
-    //関数の実行
-    yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
-    yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
+        //関数の実行
+        yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
+        yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
 
-    //引数が配列
+        //引数が配列
 
-    const sumCard = function (card) {
-      let total = 0;
-      for (let i = 0; i < card.length; i++) {
-        total += card[i]; //toral = total + card[i]
-      }
-      console.log(total);
-    };
+        const sumCard = function (card) {
+          let total = 0;
+          for (let i = 0; i < card.length; i++) {
+            total += card[i]; //toral = total + card[i]
+          }
+          console.log(total);
+        };
 
-    //配列
-    const card_list = [1, 2, 3, 4];
+        //配列
+        const card_list = [1, 2, 3, 4];
 
-    //関数の実行、引数には配列
-    sumCard(card_list); //10
+        //関数の実行、引数には配列
+        sumCard(card_list); //10
+        //-------------------------------------
 
-    //-------------------------------------
+        const member_list = [
+          "チェウォン",
+          "サクラ",
+          "ユンジン",
+          "カズハ",
+          "ウンチェ",
+        ];
+        const mugiwara_list = [
+          "モンキー・D・ルフィ",
+          "ナミ",
+          "ロロノア・ゾロ",
+          "ヴィンスモーク・サンジ",
+          "ウソップ",
+          "トニートニー・チョッパー",
+          "ニコ・ロビン",
+          "フランキー",
+          "ブルック",
+          "ジンベエ",
+        ];
 
-    const member_list = [
-      "チェウォン",
-      "サクラ",
-      "ユンジン",
-      "カズハ",
-      "ウンチェ",
-    ];
-    const mugiwara_list = [
-      "モンキー・D・ルフィ",
-      "ナミ",
-      "ロロノア・ゾロ",
-      "ヴィンスモーク・サンジ",
-      "ウソップ",
-      "トニートニー・チョッパー",
-      "ニコ・ロビン",
-      "フランキー",
-      "ブルック",
-      "ジンベエ",
-    ];
+        //.fnAreaに上記の配列の要素を<li>で追加する関数
 
-    //.fnAreaに上記の配列の要素を<li>で追加する関数
+        const memberArea = document.querySelector(".fnArea");
+        const memberPush = function (members) {
+          //memberAreaにul,liで各メンバーを入れる。
+          console.log(members);
+          const ulElm = document.createElement("ul");
 
-    const memberArea = document.querySelector(".fnArea");
-    const memberPush = function (members) {
-      //memberAreaにul,liで各メンバーを入れる。
-      console.log(members);
-      const ulElm = document.createElement("ul");
+          for (let i = 0; i < members.length; i++) {
+            const liElm = document.createElement("li");
+            liElm.textContent = members[i];
+            ulElm.appendChild(liElm);
+            console.log(liElm);
+          }
+          memberArea.innerHTML = "";
+          memberArea.appendChild(ulElm);
+        };
 
-      for (let i = 0; i < members.length; i++) {
-        const liElm = document.createElement("li");
-        liElm.textContent = members[i];
-        ulElm.appendChild(liElm);
-        console.log(liElm);
-      }
-      memberArea.appendChild(ulElm);
-    };
+        //関数の実行
+        // memberPush(member_list);
+        // memberPush(mugiwara_list);
+        const lesserafimBtn = document.querySelector(".lesserafim");
+        console.log(lesserafimBtn);
 
-    //関数の実行
-    memberPush(member_list);
-    memberPush(mugiwara_list);
+        const onepieceBtn = document.querySelector(".onepiece");
+        console.log(onepieceBtn);
+
+        lesserafimBtn.addEventListener("click", function () {
+          memberPush(member_list);
+        });
+
+        onepieceBtn.addEventListener("click", function () {
+          memberPush(mugiwara_list);
+        });
+
+        //引数の１と引数２を足す関数の定義
+
+        const addition = function (a, b) {
+          const c = a + b;
+          console.log(c);
+        };
+
+        //関数の実行
+
+        addition(10, 11); //コンソールに21と表示される
+        addition(30, "6"); //306
+
+        //戻り値のある関数の定義
+
+        const addition2 = function (a, b) {
+          const c = a * b;
+          return c; //戻り値
+        };
+
+        //関数の実行
+        addition2 (5,5)
+        const result =
+    ;
   </script>
 </html>
