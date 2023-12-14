@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,14 @@
       //当たり以外は「はずれ」と表示してください。
 
       const num = Math.floor(Math.random() * 5);
+      console.dir("num");
+
       const foods = document.querySelectorAll(".foods li");
+      console.log("foods");
+
+      foods[num].addEventListener("click", function () {
+        console.log("あたり");
+      });
     </script>
   </body>
 </html>

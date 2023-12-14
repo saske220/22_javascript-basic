@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -53,8 +53,15 @@
       //alt属性は、<li>タグのテキストに変更してください。
       //マウスアウトしたら、元に戻してください。
       const xg = document.querySelectorAll(".xg li");
+      console.log("xg");
       const member = document.querySelector(".member img");
+      console.log("member");
       const memberSrc = member.getAttribute("src");
+      console.log("memberSrc");
+
+      xg[0].addEventListener("click", function () {
+        member.setAttribute("src", "memberSrc");
+      });
     </script>
   </body>
 </html>

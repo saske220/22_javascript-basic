@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コールバック関数</title>
+  </head>
+  <body>
+    <script>
+      //関数式①
+      const concatenateSpace = function (lastName, firstName) {
+        return lastName + " " + firstName;
+      };
+
+      //関数式②
+
+      const useConcatenate = function (name, func) {
+        let concatName = func(name[0], name[1]);
+        console.log("結合結果：" + concatName);
+      };
+
+      let nameParam = ["古橋", "冴介"]; //配列
+
+      //関数の実行(引数① = 配列 , 引数② = 関数の名前)
+      useConcatenate(nameParam, concatenateSpace);
+
+      //結合結果：中田 雄二
+
+      //コールバック関数基本※よく使う
+
+      //関数式①
+      const testFunc = function (func) {
+        //funcには、関数式②
+        //関数の実行後すぐに表示
+        console.log("testFuncが実行されました");
+
+        //2秒後、実行
+        setTimeout(function () {
+          func();
+        }, 2000);
+      };
+
+      //関数式②
+      const callback = function () {
+        console.log("callbackが実行されました");
+      };
+
+      //何をしていますか？
+      //関数式①を実行しています。
+      //callbackは関数名② の 関数名
+      testFunc(callback);
+    </script>
+  </body>
+</html>

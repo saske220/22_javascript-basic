@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>演習</title>
+    <style>
+      body {
+        margin: 1rem;
+      }
+      .dash {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+      }
+
+      .dash p {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+        font-size: 2rem;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      li {
+        cursor: pointer;
+      }
+
+      li span {
+        transform: scaleX(-1);
+        display: inline-block;
+        padding-right: 1rem;
+        position: absolute;
+        left: 6rem;
+        transition-property: left;
+        transition-timing-function: ease-in-out;
+      }
+
+      .pig span {
+        transition-timing-function: ease-in;
+      }
+
+      li span.run {
+        left: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>動物のスピード</h1>
+    <div class="dash">
+      <p>START</p>
+      <p>GOAL</p>
+    </div>
+    <ul>
+      <li class="dog">イヌ<span>🐕</span></li>
+      <li class="cat">ネコ<span>🐈</span></li>
+      <li class="horse">ウマ<span>🐎</span></li>
+      <li class="pig">ブタ<span>🐖</span></li>
+      <li class="gorilla">ゴリラ<span>🦍</span></li>
+    </ul>
+    <button class="startBtn">よーい、ドン！</button>
+    <script>
+      //要素の取得
+      const startBtn = document.querySelector(".startBtn");
+      console.log("startBtn");
+
+      const animalSpeed = [3, 4, 1, 3, 2];
+      console.log("animalSpeed");
+
+      const animals = document.querySelectorAll("li span");
+      console.log("animals");
+
+      // ここに関数animalsRunを作成してください。
+
+      const animalsRun = function () {
+        for (let i = 0; i < animals.length; i++) {
+          animals[i].style.transitionDuration = animalSpeed[i] + "s";
+          animals[i].classList.add("run");
+        }
+      };
+
+      startBtn.addEventListener("click", function () {
+        animalsRun();
+      });
+    </script>
+  </body>
+</html>
