@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-querySelectorとquerySelectorAll</title>
+  </head>
+  <body>
+    <h1>松屋の牛めし</h1>
+    <ul class="gyumeshi">
+      <li>チーズ牛めし</li>
+      <li>キムチ牛めし</li>
+      <li class="negi">ネギねぎ牛めし</li>
+      <li class="base">牛めし</li>
+      <li class="negi">ネギとろろ牛めし</li>
+      <li class="negi">ネギたっぷり旨辛ネギたま牛めし</li>
+      <li>鬼おろしポン酢牛めし</li>
+    </ul>
+    <script>
+      // 例
+      // チーズ牛めしをquerySelectorで取得しコンソールで表示
+      const cheese = document.querySelector("li");
+      console.log(cheese.textContent);
+
+      //牛めしをquerySelectorで取得しコンソールで表示
+
+      const base = document.querySelector(".base");
+      console.log(base.textContent);
+
+      //ネギとろろ牛めしをquerySelectorで取得しコンソールで表示※nth-childを使う。
+
+      const negi = document.querySelector(".gyumeshi li:nth-child(5)");
+      console.log(negi);
+
+      //ネギたっぷり旨辛ネギたま牛めしをquerySelectorAll("li")で取得し、コンソールで表示
+
+      const negitappuri = document.querySelectorAll(".negi li");
+      console.log(negitappuri);
+
+      //class="negi"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+
+      const negiItems = document.querySelectorAll(".negi");
+
+      for (let i = 0; i < negiItems.length; i++) {
+        console.log(negiItems[i].textContent);
+      }
+    </script>
+  </body>
+</html>

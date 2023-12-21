@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-変数の値をhtmlに追加</title>
+  </head>
+  <body>
+    <h1>2023 ラグビーワールドカップ</h1>
+    <p>
+      ラグビーワールドカップフランス大会、<span class="nation"></span
+      >は1次リーグの第4戦でアルゼンチンと対戦し、<span class="japanscore"></span
+      >対<span class="argentinescore"></span
+      >で敗れて1次リーグでの敗退が決まり、2大会連続の決勝トーナメント進出はなりませんでした。
+    </p>
+    <script>
+      //下記の変数を使って、上記の文章を完成させてください。
+      //例
+      const nation = "日本代表";
+      const nationName = document.querySelector(".nation");
+      nationName.textContent = nation;
+
+      //日本の点数
+      const japan = 27;
+      //<span class="japanscore"></span>に日本の点数を追加してください。
+
+      //アルゼンチンの点数
+      const argentine = 39;
+      //<span class="argentinescore"></span>にアルゼンチンの点数を追加してください。
+    </script>
+  </body>
+</html>

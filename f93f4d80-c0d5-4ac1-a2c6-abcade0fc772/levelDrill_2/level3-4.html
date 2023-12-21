@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル3-ランダムで選ばれた数値を選ぶと</title>
+    <style>
+      .slot {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>スロット</h1>
+    <ul class="slot">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <button>スロット1</button>
+    <button>スロット2</button>
+    <button>スロット3</button>
+    <script>
+      //スロット1〜3のボタンをクリックすると、0〜7でランダムで選ばれた数値が<li>に表示されるようにしてください。
+      //もし、3つとも揃ったら、コンソールに「フィーバー」と表示させてください。
+
+      const numArea = document.querySelectorAll(".slot li");
+      const btn = document.querySelectorAll("button");
+    </script>
+  </body>
+</html>

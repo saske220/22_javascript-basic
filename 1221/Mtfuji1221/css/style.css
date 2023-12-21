@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.slide {
+  display: flex;
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide img {
+  width: 100%;
+  min-width: 100%;
+  transition: all 0.5s ease-in;
+}
+
+.slide img:first-child {
+  margin-left: -100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+button {
+  color: #fff;
+  background-color: #000000;
+  width: 100px;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+  border: none;
+}
+
+button:hover {
+  color: #000000;
+  background-color: #fff;
+  transition-duration: 0.5s;
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 9px #8f8f8f;
+}

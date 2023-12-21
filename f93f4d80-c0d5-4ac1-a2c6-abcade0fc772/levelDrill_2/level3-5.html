@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル3-生まれ年から干支</title>
+    <style>
+      div {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>干支を当てます</h1>
+    <form>
+      <div>
+        <label for="year">生まれ年</label>
+        <input type="number" id="year" min="1900" max="2100" value="2000" />
+      </div>
+      <div>
+        <button type="button">干支を当てる</button>
+      </div>
+    </form>
+    <script>
+      //下記の変数を使って、生まれ年を入力すると、干支が表示されるようにしてください。
+      //関数etoで作ってください。
+      //2000年は「辰」でした。
+      const btn = document.querySelector("button");
+
+      /*formから値を取得するには、
+      const year = document.querySelector("#year").value;
+      を使います。*/
+
+      //関数etoの実行
+      eto();
+    </script>
+  </body>
+</html>

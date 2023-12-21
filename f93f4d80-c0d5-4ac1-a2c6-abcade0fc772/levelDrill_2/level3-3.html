@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル3-マウスオーバーイベントで属性の操作</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        margin: 40px;
+      }
+
+      .befirst {
+        list-style: none;
+        margin-right: 40px;
+      }
+      .befirst li {
+        cursor: pointer;
+      }
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="befirst">
+      <li class="ryuhei">RYUHEI</li>
+      <li class="shunto">SHUNTO</li>
+      <li class="manato">MANATO</li>
+      <li class="ruiki">RUIKI</li>
+      <li class="sota">SOTA</li>
+      <li class="leo">LEO</li>
+      <li class="junon">JUNON</li>
+    </ul>
+    <div class="member">
+      <img src="images/befirst.svg" alt="BE:FIRSTロゴ" />
+    </div>
+    <script>
+      //下記の変数を使ってメンバー名の上にマウスオーバーしたら、<div class="member">内のimgのsrc属性を変更して表示を変化させてください。
+      //alt属性は、<li>タグのテキストに変更してください。
+      //マウスアウトしたら、元に戻してください。
+      //例
+      const member = document.querySelector(".member");
+      const ryuhei = document.querySelector(".ryuhei");
+      ryuhei.addEventListener("mouseover", function () {
+        member.innerHTML =
+          '<img src="images/ryuhei.jpg" alt="' + ryuhei.innerText + '">';
+      });
+      ryuhei.addEventListener("mouseout", function () {
+        member.innerHTML = '<img src="images/befirst.svg" alt="BE:FIRSTロゴ">';
+      });
+
+      //他のメンバーのマウスオーバーイベントをプログラムしてください。
+    </script>
+  </body>
+</html>

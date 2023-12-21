@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル3-クリックイベントで属性の操作</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+        margin: 10px;
+        border: 1px solid #000;
+      }
+      #red {
+        background-color: red;
+      }
+      #blue {
+        background-color: blue;
+      }
+      #green {
+        background-color: green;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      #gray {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="gray">gray</div>
+    <div class="box" id="red">red</div>
+    <div class="box" id="blue">blue</div>
+    <div class="box" id="green">green</div>
+    <div class="box" id="yellow">yellow</div>
+    <script>
+      //下記の変数を使って、ボックスをクリックするとid属性値を使って、bodyの背景色がトグルするようにしてください。
+      const box = document.querySelectorAll(".box");
+      //例
+      box[0].addEventListener("click", function () {
+        const idvalue = box[0].getAttribute("id");
+        document.body.style.backgroundColor = idvalue;
+      });
+
+      // for文で書ければ、書いてください。
+    </script>
+  </body>
+</html>

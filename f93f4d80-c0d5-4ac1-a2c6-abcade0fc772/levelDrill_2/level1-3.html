@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル1-HTMLの取得と連結</title>
+  </head>
+  <body>
+    <h1>ご当地ラーメン</h1>
+    <ul>
+      <li class="sample">札幌</li>
+      <li class="kitakata">喜多方</li>
+      <li class="iekei">横濱家系</li>
+      <li class="taiwan">台湾ラーメン</li>
+      <li class="onomichi">尾道</li>
+      <li class="hakata">ラーメン</li>
+    </ul>
+
+    <script>
+      const ramen = "ラーメン";
+
+      //例:htmlから要素を取得し、変数に代入する。
+      const sapporo = document.querySelector(".sample");
+      //要素なので、中からテキストを抜き出し、変数に代入する。
+      const sapporoText = sapporo.textContent;
+      //抜き出したテキストとラーメンを結合し、コンソールに表示する。
+      console.log(sapporoText + ramen);
+
+      //上記htmlから各単語を取得し変数に代入し、5種類のラーメンをコンソールに表示させてください。
+      // 喜多方らーめん
+
+      // 横浜家系ラーメン
+
+      // 台湾ラーメン
+
+      // 尾道ラーメン
+
+      // 博多ラーメン
+    </script>
+  </body>
+</html>

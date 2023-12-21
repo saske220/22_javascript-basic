@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-変数の値をappendChild</title>
+  </head>
+  <body>
+    <h1>AKB48神セブン</h1>
+    <ul class="god_seven"></ul>
+    <script>
+      //下記の変数を使って、神セブンのメンバーを<ul class="god_seven">内に<li>で追加してください。
+      const sailorSensi = document.querySelector(".god_seven");
+
+      const atsuko = "前田敦子";
+      const yuko = "大島優子";
+      const kojiharu = "小嶋陽菜";
+      const mariko = "篠田麻里子";
+      const tomochin = "板野友美";
+      const mayuyu = "渡辺麻友";
+      const takamina = "高橋みなみ";
+
+      //例：前田敦子を追加
+      const liElm1 = document.createElement("li");
+      liElm1.textContent = atsuko;
+      sailorSensi.appendChild(liElm1);
+
+      //他のメンバーを追加してください。
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル2-querySelectorとquerySelectorAll</title>
+  </head>
+  <body>
+    <h1>好きなグループ</h1>
+    <ul class="samplegroup"></ul>
+    <ul class="favoritegroup"></ul>
+    <script>
+      //自分の好きなチーム・アイドル・バンドなどの5人以上のグループのメンバーを配列にして、ul内にliで表示させてください。
+      //例
+      const ive = [
+        "アン・ユジン",
+        "ガウル",
+        "レイ",
+        "ジウォン",
+        "リズ",
+        "ウォニョン",
+      ];
+      const sample = document.querySelector(".samplegroup");
+      for (let i = 0; i < ive.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = ive[i];
+        sample.appendChild(li);
+      }
+
+      //上記例を参考に、自分の好きなグループ（5人以上）のメンバーを配列にして、<ul class="favoritegroup">内にliで表示させてください。
+
+      const ive2 = [
+        "アン・ユジン",
+        "ガウル",
+        "レイ",
+        "ジウォン",
+        "リズ",
+        "ウォニョン",
+      ];
+
+      const sample2 = document.querySelector(".favoritegroup");
+      for (let i = 0; i < ive2.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = ive2[i];
+        sample2.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

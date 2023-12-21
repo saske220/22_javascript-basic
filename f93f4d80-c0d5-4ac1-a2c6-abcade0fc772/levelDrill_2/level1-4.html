@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>レベル1-HTMLの取得と連結</title>
+  </head>
+  <body>
+    <h1>都道府県</h1>
+    <ul>
+      <li class="sample">岐阜</li>
+      <li class="hokkaido">北海</li>
+      <li class="tokyo">東京</li>
+      <li class="kyoto">京都</li>
+      <li class="osaka">大阪</li>
+      <li class="aichi">愛知</li>
+    </ul>
+
+    <script>
+      const to = "都";
+      const dou = "道";
+      const yo = "府";
+      const ken = "県";
+
+      //各リスト内の都道府県名を取得し、変数に代入し、後ろに都道府県を追加してください。
+      //例:htmlから要素を取得しする。
+      const gifu = document.querySelector(".sample");
+      //抜き出したテキストと適切な都道府県を組み合わせる
+      const gifuTex = gifu.textContent + ken;
+      gifu.innerText = gifuTex;
+
+      //上記htmlから要素を取得し、適切な都道府県を組み合わせる
+      // 北海道
+
+      // 東京都
+
+      // 京都府
+
+      // 大阪府
+
+      // 愛知県
+    </script>
+  </body>
+</html>
