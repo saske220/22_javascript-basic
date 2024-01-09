@@ -48,7 +48,16 @@
         document.body.style.backgroundColor = idvalue;
       });
 
-      // for文で書ければ、書いてください。
+      // for文で書ければ、書いてください
+
+      const boxes = document.querySelectorAll(".box");
+
+      for (let i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener("click", function () {
+          const idValue = boxes[i].getAttribute("id");
+          document.body.style.backgroundColor = idValue;
+        });
+      }
     </script>
   </body>
 </html>

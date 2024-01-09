@@ -35,6 +35,33 @@
       const year = document.querySelector("#year").value;
       を使います。*/
 
+      function eto() {
+        const yearInput = document.querySelector("#year");
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", function () {
+          const year = parseInt(yearInput.value);
+          const etoSigns = [
+            "子",
+            "丑",
+            "寅",
+            "卯",
+            "辰",
+            "巳",
+            "午",
+            "未",
+            "申",
+            "酉",
+            "戌",
+            "亥",
+          ];
+          const startYear = 1900;
+          const etoIndex = (year - startYear) % 12;
+
+          alert(`${year}年は「${etoSigns[etoIndex]}」でした。`);
+        });
+      }
+
       //関数etoの実行
       eto();
     </script>

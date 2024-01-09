@@ -46,7 +46,7 @@
       <img src="images/befirst.svg" alt="BE:FIRSTロゴ" />
     </div>
     <script>
-      //下記の変数を使ってメンバー名の上にマウスオーバーしたら、<div class="member">内のimgのsrc属性を変更して表示を変化させてください。
+      //下記の変数を使ってメンバー名の上にマウスhoverしたら、<div class="member">内のimgのsrc属性を変更して表示を変化させてください。
       //alt属性は、<li>タグのテキストに変更してください。
       //マウスアウトしたら、元に戻してください。
       //例
@@ -60,7 +60,21 @@
         member.innerHTML = '<img src="images/befirst.svg" alt="BE:FIRSTロゴ">';
       });
 
-      //他のメンバーのマウスオーバーイベントをプログラムしてください。
+      //他のメンバーのマウスhoverイベントをプログラムしてください。
+
+      const membersList = document.querySelectorAll(".befirst li");
+
+      membersList.forEach((memberItem) => {
+        memberItem.addEventListener("mouseover", function () {
+          const memberName = memberItem.innerText;
+          member.innerHTML = `<img src="images/${memberName.toLowerCase()}.jpg" alt="${memberName}">`;
+        });
+
+        memberItem.addEventListener("mouseout", function () {
+          member.innerHTML =
+            '<img src="images/befirst.svg" alt="BE:FIRSTロゴ">';
+        });
+      });
     </script>
   </body>
 </html>

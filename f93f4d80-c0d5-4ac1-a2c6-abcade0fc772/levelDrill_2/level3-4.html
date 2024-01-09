@@ -35,6 +35,29 @@
 
       const numArea = document.querySelectorAll(".slot li");
       const btn = document.querySelectorAll("button");
+
+      function generateRandomNumber() {
+        return Math.floor(Math.random() * 8);
+      }
+
+      function checkForFever() {
+        const firstNum = parseInt(numArea[0].textContent);
+        const secondNum = parseInt(numArea[1].textContent);
+        const thirdNum = parseInt(numArea[2].textContent);
+
+        if (firstNum === secondNum && secondNum === thirdNum) {
+          console.log("フィーバー");
+        }
+      }
+
+      btn.forEach((button, index) => {
+        button.addEventListener("click", function () {
+          const randomNumber = generateRandomNumber();
+          numArea[index].textContent = randomNumber;
+
+          checkForFever();
+        });
+      });
     </script>
   </body>
 </html>

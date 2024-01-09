@@ -20,6 +20,13 @@
       const bigBtn = document.querySelector("button");
       const bigText = document.querySelector("span");
       let fontsize = 16;
+
+      bigBtn.addEventListener("click", function () {
+        if (fontsize < 30) {
+          fontsize += 2;
+          bigText.style.fontSize = fontsize + "px";
+        }
+      });
     </script>
   </body>
 </html>
