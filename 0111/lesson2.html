@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const championship = {
+      //     2018: "大阪桐蔭",
+      //     2019: "履正社",
+      //     2020: null,
+      //     2021: "智弁和歌山",
+      //     2022: "仙台育英",
+      //     2023: "慶応",
+      //   };
+
+      //   const selection = {
+      //     2018: "大阪桐蔭",
+      //     2019: "東邦",
+      //     2020: null,
+      //     2021: "東海大相模",
+      //     2022: "大阪桐蔭",
+      //     2023: "山梨学院",
+      //   };
+
+      //   // ① 選手権優勝校はドット記法
+      //   console.log(championship["2023"]); // 慶応
+
+      //   // ② 選抜優勝校はブラケット記法
+      //   console.log(selection[2023]); // 山梨学院
+
+      const hashira_list = {
+        water: "鱗滝左近次",
+        worm: "胡蝶しのぶ",
+        flame: "煉獄杏寿郎",
+        sound: "宇髄天元",
+        love: "甘露寺蜜璃",
+      };
+
+      // 岩柱を追加
+      hashira_list["rock"] = "悲鳴嶼行冥";
+
+      // 霞柱を追加
+      hashira_list["haze"] = "時透無一郎";
+
+      // 蛇柱を追加
+      hashira_list["snake"] = "伊黒小芭内";
+
+      // 風柱を追加
+      hashira_list["wind"] = "不死川実弥";
+
+      // 追加したオブジェクトを console に表示
+      console.log(hashira_list);
+
+      const hashira_list = {
+        water: "鱗滝左近次",
+        worm: "胡蝶しのぶ",
+        flame: "煉獄杏寿郎",
+        sound: "宇髄天元",
+        love: "甘露寺蜜璃",
+      };
+
+      const hashira_list = {
+        water: "鱗滝左近次",
+        worm: "胡蝶しのぶ",
+        flame: "煉獄杏寿郎",
+        sound: "宇髄天元",
+        love: "甘露寺蜜璃",
+        rock: "悲鳴嶼行冥",
+        haze: "時透無一郎",
+        snake: "伊黒小芭内",
+        wind: "不死川実弥",
+      };
+
+      // 水柱の氏名を冨岡義勇に書き換え
+      hashira_list["water"] = "冨岡義勇";
+
+      // 書き換えたオブジェクトを console に表示
+      console.log(hashira_list);
+    </script>
+  </body>
+</html>

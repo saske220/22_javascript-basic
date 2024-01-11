@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>送信結果</title>
+  </head>
+  <body>
+    <h1>GETフォーム受信</h1>
+    <ul class="result"></ul>
+    <script>
+      const url = new URL(window.location.href);
+      const params = url.searchParams;
+      params.forEach(function (value, key) {
+        const li = document.createElement("li");
+        li.textContent = `${key};${value}`;
+        document.querySelector(".result").appendChild(li);
+      });
+    </script>
+  </body>
+</html>

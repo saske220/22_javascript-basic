@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オブジェクト</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "",
+        age: 0,
+        information: function () {
+          return "名前:" + this.name + "\n年齢:" + this.age;
+        },
+      };
+
+      person.name = "ヤマダタロウ";
+
+      element.textContent = "hogehoge";
+
+      console.log(person.information());
+
+      const myCar_list = {}; //空のオブジェクトを作成
+      myCar_list.make = "Ford";
+      myCar_list.model = "Mustang";
+      myCar_list.year = 1969;
+      console.log(myCar_list);
+      //{make: 'Ford', model: 'Mustang', year: 1969}
+
+      console.log(myCar_list.model);
+    </script>
+  </body>
+</html>

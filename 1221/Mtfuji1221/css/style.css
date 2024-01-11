@@ -39,4 +39,5 @@ button:hover {
   transition-duration: 0.5s;
   transform: translateY(-5px);
   box-shadow: 5px 5px 9px #8f8f8f;
+  justify-content: ;
 }

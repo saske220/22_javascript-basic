@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列-for文</title>
+  </head>
+  <body>
+    <ul>
+      <li>トヨタ自動車株式会社</li>
+      <li>本田技研工業株式会社</li>
+      <li>日産自動車株式会社</li>
+      <li>三菱自動車工業株式会社</li>
+      <li>マツダ株式会社</li>
+      <li>株式会社SUBARU</li>
+      <li>ダイハツ工業株式会社</li>
+      <li>スズキ株式会社</li>
+      <li>いすぞ自動車株式会社</li>
+      <li>日野自動車株式会社</li>
+      <li>三菱ふそうトラック・バス株式会社</li>
+    </ul>
+    <script>
+      const carManufacturers = document.querySelectorAll("li");
+      //carManufacturersをfor文で回して、各自動車メーカーをconsole二表示してください。
+      for (let i = 0; i < carManufacturers.length; i++) {
+        console.log(carManufacturers[i].textContent);
+      }
+    </script>
+  </body>
+</html>
