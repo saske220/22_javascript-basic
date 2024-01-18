@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列—for文</title>
+  </head>
+  <body>
+    <script>
+      const godseven = [
+        { name: "前田敦子", age: 32 },
+        { name: "大島優子", age: 35 },
+        { name: "篠田麻里子", age: 37 },
+        { name: "渡辺麻友", age: 29 },
+        { name: "高橋みなみ", age: 32 },
+        { name: "小嶋陽菜", age: 35 },
+        { name: "板野友美", age: 32 },
+      ];
+      //例
+      for (let i = 0; i < godseven.length; i++) {
+        console.log(
+          godseven[i].name + "は、現在" + godseven[i].age + "歳です。"
+        );
+      }
+
+      const sakurazakaMember = [
+        { name: "小池美波", age: 25 },
+        { name: "小林由依", age: 24 },
+        { name: "土生瑞穂", age: 26 },
+        { name: "大園玲", age: 23 },
+        { name: "武元唯衣", age: 21 },
+        { name: "田村保乃", age: 25 },
+        { name: "藤吉夏鈴", age: 22 },
+        { name: "増本綺良", age: 22 },
+        { name: "松田里奈", age: 24 },
+        { name: "森田ひかる", age: 22 },
+        { name: "守屋麗奈", age: 24 },
+        { name: "山崎天", age: 18 },
+        { name: "谷口愛季", age: 18 },
+        { name: "中嶋優月", age: 20 },
+        { name: "村井優", age: 19 },
+        { name: "山下瞳月", age: 18 },
+      ];
+      //上記例のように、メンバー全員の名前と年齢を「名前は、○○歳です。」と表示させてください。
+
+      for (let i = 0; i < sakurazakaMember.length; i++) {
+        console.log(
+          sakurazakaMember[i].name +
+            "は、現在" +
+            sakurazakaMember[i].age +
+            "歳です。"
+        );
+      }
+    </script>
+  </body>
+</html>

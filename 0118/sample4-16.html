@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+    </style>
+    <h1>人気のフルーツ一覧</h1>
+    <ul></ul>
+
+    <h1>数字を英語で表現する</h1>
+    <table class="table_nam">
+      <tr>
+        <th>数字</th>
+        <th>英語</th>
+      </tr>
+    </table>
+
+    <script>
+      const fruits = ["りんご", "もも", "バナナ"];
+      const ul = document.querySelector("ul");
+
+      for (let name of fruits) {
+        console.log(name); //要素が一つずつ入ってくる
+        const li = document.createElement("li");
+        li.innerHTML = name;
+        ul.appendChild(li);
+      }
+
+      const numbers = ["zero", "one", "two", "three", "four", "five"];
+
+      const table = document.querySelector("table");
+
+      for (let i = 0; i < numbers.length; i++) {
+        const tr = document.createElement("tr");
+        const tdf = document.createElement("td");
+        const tds = document.createElement("td");
+
+        tdf.textContent = i;
+        tds.textContent = numbers[i];
+
+        tr.appendChild(tdf);
+        tr.appendChild(tds);
+        table.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>

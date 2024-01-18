@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オブジェクト・配列</title>
+  </head>
+  <body>
+    <script>
+      const countries = {
+        Japan: "日本",
+        USA: "アメリカ",
+        China: "中国",
+        Korea: "韓国",
+      };
+
+      for (let key in countries) {
+        console.log(key + ":" + countries[key]);
+      }
+      console.log(countries.USA);
+      console.log(countries["USA"]);
+
+      for (let country in countries) {
+        console.log(countries.country);
+      }
+
+      const meibo_obj = [
+        //[]で囲まれているので配列
+        { id: "20224", name: "新井太郎" }, //{}で囲まれているのでオブジェクト
+        { id: "20031", name: "井上次郎" },
+        { id: "20193", name: "山本花子" },
+      ];
+
+      //オブジェクトが３つはいっているオブジェクト
+      //配列の要素が全部欲しい
+
+      for (let i = 0; i < meibo_obj, length; i++) {
+        console.log(meibo_obj[i]);
+
+        for (let key in meibo_obj[i]) {
+          console.log(key);
+          console.log(meibo_obj[i][key]);
+        }
+      }
+
+      let npbCentral_list = [
+        { team: "東京ヤクルトスワローズ", home: "東京" },
+        { team: "阪神タイガース", home: "大阪" },
+        { team: "読売ジャイアンツ", home: "東京" },
+        { team: "広島東洋カープ", home: "広島" },
+        { team: "中日ドラゴンズ", home: "名古屋" },
+        { team: "横浜DeNAベイスターズ", home: "横浜" },
+      ];
+
+      //中日ドラゴンズの本拠地をconsoleに表示する
+      //配列の指定→オブジェクトの指定
+      //for文 for..inは使わなくてよい
+
+      console.log(npbCentral_list[4].home); // 名古屋
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列の中</title>
+  </head>
+  <body>
+    <style>
+      .table_gafam {
+        border-collapse: collapse;
+      }
+
+      .table_gafam th,
+      .table_gafam td {
+        border: solid 1px #000;
+      }
+    </style>
+
+    <h1>GAFAMの一覧</h1>
+    <table class="table_gafam">
+      <tr>
+        <th>名前</th>
+        <th>運営会社</th>
+        <th>創立年</th>
+        <th>URL</th>
+      </tr>
+    </table>
+
+    <script>
+      const corporation = [
+        {
+          name: "Google",
+          company: "Alphabet Inc.",
+          founding: 1998,
+          url: "https://www.abc.xyz/",
+        },
+        {
+          name: "Apple",
+          company: "Apple Inc.",
+          founding: 1976,
+          url: "https://www.apple.com/",
+        },
+        {
+          name: "Facebook",
+          company: "Facebook, Inc.",
+          founding: 2004,
+          url: "https://www.meta.com/",
+        },
+        {
+          name: "Amazon",
+          company: "Amazon.com, Inc.",
+          founding: 1994,
+          url: "https://www.amazon.com",
+        },
+        {
+          name: "Microsoft",
+          company: "Microsoft Corporation",
+          founding: 1975,
+          url: "https://www.microsoft.com/",
+        },
+      ];
+
+      //   //入れたいtable
+      //   const tableElm = document.querySelector(".table_gafam");
+
+      //   for (let co of corporation) {
+      //     const trElm = document.createElement("tr");
+      //     console.log(co);
+      //     tableElm.appendChild(trElm);
+      //     for (let key in co) {
+      //       console.log(key);
+      //       const tdElm = document.createElement("td");
+      //       tdElm.innerHTML = co(key);
+      //       trElm.appendChild(tdElm);
+      //     }
+      //     tableElm.appendChild(trElm);
+      //   }
+
+      //練習問題4-1 p103
+
+      const array = [];
+      array.push(1);
+      array.push(2);
+      array.push(3);
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+    </script>
+  </body>
+</html>

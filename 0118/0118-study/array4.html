@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列—for文</title>
+  </head>
+  <body>
+    <h1>「白雪姫」7人のこびと</h1>
+    <ul class="dwarfs">
+      <li>ドーピー（おとぼけ）</li>
+      <li>スニージー（くしゃみ）</li>
+      <li>スリーピー（ねぼすけ）</li>
+      <li>グランピー（おこりんぼ）</li>
+      <li>バッシュフル（てれすけ）</li>
+      <li>ドック（先生）</li>
+      <li>ハッピー（ごきげん）</li>
+    </ul>
+    <script>
+      const sevenDwarfs = document.querySelectorAll(".dwarfs li");
+      //dwarfsをfor文で回して、各こびとの名前をconsoleに表示してください。
+      for (let i = 0; i < sevenDwarfs.length; i++) {
+        console.log(sevenDwarfs[i]);
+      }
+    </script>
+  </body>
+</html>
