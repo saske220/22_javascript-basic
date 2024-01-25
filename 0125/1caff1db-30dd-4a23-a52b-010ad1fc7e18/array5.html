@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オブジェクトーfor...in</title>
+  </head>
+  <body>
+    <script>
+      const Ohtani = {
+        nationality: "日本",
+        birthplace: "岩手県水沢市",
+        age: 29,
+        height: "193cm",
+        weight: "95.3kg",
+      };
+      //例：for..in文で値を全てconsoleに表示する
+      for (let data in Ohtani) {
+        console.log(Ohtani[data]);
+      }
+
+      const fujiisota = {
+        birthplace: "愛知県瀬戸市",
+        affiliation: "日本将棋連盟（関西）",
+        master: "杉本昌隆八段",
+        heldTitles: [
+          "竜王",
+          "名人",
+          "王位",
+          "叡王",
+          "王座",
+          "棋王",
+          "王将",
+          "棋聖",
+        ],
+        age: 21,
+      };
+      //for..in文で値を全てconsoleに表示する
+
+      for (let data in fujiisota) {
+        console.log(fujiisota[data]);
+      }
+
+      //わかる人は、一緒に将棋タイトルも全て表示させてください。
+
+      for (let key in fujiisota) {
+        if (key === "heldTitles") {
+          console.log(title);
+        } else {
+          fujiisota[key];
+        }
+      }
+    </script>
+  </body>
+</html>

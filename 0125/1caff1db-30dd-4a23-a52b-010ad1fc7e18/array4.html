@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列—for...of文</title>
+  </head>
+  <body>
+    <script>
+      //for..of文例
+      const nagoya = [
+        "千種",
+        "東",
+        "北",
+        "西",
+        "中村",
+        "中",
+        "昭和",
+        "瑞穂",
+        "熱田",
+        "中川",
+        "港",
+        "南",
+        "守山",
+        "緑",
+        "名東",
+        "天白",
+      ];
+
+      //例 for...of文でまわして区を追加してください。
+      for (let ku of nagoya) {
+        console.log(ku + "区");
+      }
+
+      const higashiyama_line = [
+        "高畑",
+        "八田",
+        "岩塚",
+        "中村公園",
+        "中村日赤",
+        "本陣",
+        "亀島",
+        "名古屋",
+        "伏見",
+        "栄",
+        "新栄町",
+        "千種",
+        "今池",
+        "池下",
+        "覚王山",
+        "本山",
+        "東山公園",
+        "星ヶ丘",
+        "一社",
+        "上社",
+        "本郷",
+        "藤が丘",
+      ];
+
+      //for...oｆ文でまわして駅を追加してください。
+
+      for (let ku of nagoya) {
+        console.log(ku + "駅");
+      }
+    </script>
+  </body>
+</html>

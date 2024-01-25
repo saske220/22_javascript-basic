@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日付オブジェクト</title>
+  </head>
+  <body>
+    <script>
+      const now = new Date();
+      console.log(now);
+
+      const day = ["日", "月", "火", "水", "木", "金", "土"];
+      console.log(now.getDay()); //4
+
+      console.log(day[now.getDay()]);
+
+      const promotionDay = new Date("2024-2-8");
+      console.log(promotionDay - now); //ミリ秒
+
+      const difference = promotionDay - now; //残り時間
+
+      //ミリ秒→秒
+      const seconds = difference / 1000;
+      console.log(seconds); //秒
+
+      //秒→分
+      const minits = seconds / 60;
+      console.log(minits); //分
+
+      //分→時間
+      const hours = minits / 60;
+      console.log(hours); //時間
+
+      //時間→日
+      //   const days = hours / 24;
+      //   console.log(days); //日
+
+      //ミリ秒→日
+      const days = difference / (1000 * 60 * 60 * 24);
+      console.log(days);
+    </script>
+  </body>
+</html>
