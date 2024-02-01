@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列_オブジェクト</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      //例
+      const objectsArray = [
+        { name: "Object 1", value: 100 },
+        { name: "Object 2", value: 200 },
+        { name: "Object 3", value: 300 },
+        { name: "Object 4", value: 400 },
+        { name: "Object 5", value: 500 },
+      ];
+
+      let addition = 0;
+      for (let data of objectsArray) {
+        addition = addition + data.value;
+      }
+      console.log("合計：" + addition);
+
+      //<ul>にオブジェクトobjectsArrayのnameを<li>すべて表示させてください。
+
+      for (let data of objectsArray) {
+        console.log(objectsArray);
+
+        const ulArea = document.createElement("ul");
+        console.log(ulArea);
+        const liArea = document.createElement("li");
+        console.log(liArea);
+
+        liArea.textContent = objectsArray;
+
+        liArea.appendChild(objectsArray);
+      }
+    </script>
+  </body>
+</html>

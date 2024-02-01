@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列</title>
+  </head>
+  <body>
+    <script>
+      //例
+      const makuuchi = ["十両", "前頭", "小結", "関脇", "大関", "横綱"];
+      for (let rank of makuuchi) {
+        console.log(rank);
+      }
+
+      const boxingWeightClasses = [
+        "ヘビー級",
+        "クルーザー級",
+        "ライトヘビー級",
+        "スーパーミドル級",
+        "ミドル級",
+        "スーパーウェルター級",
+        "ウェルター級",
+        "スーパーライト級",
+        "ライト級",
+        "スーパーフェザー級",
+      ];
+      //for文もしくは、for...of文でコンソールに表示させてください。
+
+      for (let weightClass of boxingWeightClasses) {
+        console.log(boxingWeightClasses[weightClass]);
+      }
+    </script>
+  </body>
+</html>

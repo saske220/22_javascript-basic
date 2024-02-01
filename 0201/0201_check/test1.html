@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .tabcontent.show {
+        display: block;
+      }
+
+      .tabcontent {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab('Tab1')">Tab1</button>
+      <button class="tablinks" onclick="openTab('Tab2')">Tab2</button>
+      <button class="tablinks" onclick="openTab('Tab3')">Tab3</button>
+    </div>
+
+    <div class="tabcontent show" id="Tab1">
+      <h3>Tab1</h3>
+      <p>タブ1のコンテンツです。</p>
+    </div>
+    <div class="tabcontent" id="Tab2">
+      <h3>Tab2</h3>
+      <p>タブ2のコンテンツです。</p>
+    </div>
+    <div class="tabcontent" id="Tab3">
+      <h3>Tab3</h3>
+      <p>タブ3のコンテンツです。</p>
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        // すべてのタブコンテンツを非表示にする
+        var tabContents = document.querySelectorAll(".tabcontent");
+        tabContents.forEach(function (content) {
+          content.style.display = "none";
+        });
+
+        // クリックされたタブに対応するコンテンツを表示する
+        var tabContentToShow = document.getElementById(tabName);
+        tabContentToShow.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

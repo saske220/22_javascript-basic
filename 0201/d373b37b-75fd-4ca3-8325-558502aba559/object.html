@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>オブジェクト</title>
+  </head>
+  <body>
+    <script>
+      //例
+      const hina = {
+        Reading: "はやた ひな",
+        Name: "早田 ひな",
+        BirthDay: "2000年7月7日（23歳）",
+        Nationality: "日本",
+        Gender: "女性",
+        "Blood Type": "A型",
+        Height: "167cm",
+      };
+
+      for (let key in hina) {
+        console.log(hina[key]);
+      }
+
+      const harry = {
+        Reading: "はりもと ともかず",
+        Name: "張本 智和",
+        BirthDay: "2003年6月27日（20歳）",
+        Nationality: "日本",
+        Hometown: "宮城県の旗宮城県仙台市",
+        Gender: "男性",
+        BloodType: "O型",
+        Height: "176cm",
+        Weight: "77kg",
+        "Shoe Size": "28cm",
+        Sister: "張本美和（妹）",
+      };
+
+      //for...in文をつかって、harryの値を全てコンソールに表示させてください。
+
+      for (let key in harry) {
+        console.log(harry[key]);
+      }
+    </script>
+  </body>
+</html>
